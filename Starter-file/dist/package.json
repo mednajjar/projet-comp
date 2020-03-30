@@ -1,0 +1,27 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Quize coronavirus project",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass sass/main.scss css/style.css --watch",
+    "compile": "node-sass sass/main.scss css/style.comp.css",
+    "concat": "concat -o css/concat.css css/conseils.css css/style.comp.css",
+    "prefix": "postcss css/concat.css --use=autoprefixer --map=false --output=css/style.prefix.css",
+    "compress": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "comp-js": "uglifyjs js/script.js -o js/main.js",
+    "build-css": "npm-run-all watch compile prefix compress"
+  },
+  "author": "MED NAJJAR",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.7.5",
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.0"
+  },
+  "dependencies": {
+    "minifier": "^0.8.1"
+  }
+}
