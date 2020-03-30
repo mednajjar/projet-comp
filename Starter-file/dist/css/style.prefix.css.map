@@ -1,0 +1,1 @@
+{"version":3,"sources":["concat.css"],"names":[],"mappings":"AAAA;IACI,SAAS;IACT,UAAU;AACd;AACA;IACI,sBAAsB;AAC1B","file":"style.prefix.css","sourcesContent":["* {\r\n    margin: 0;\r\n    padding: 0;\r\n}\nbody {\r\n    box-sizing: border-box;\r\n}"]}
