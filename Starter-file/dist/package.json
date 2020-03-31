@@ -4,11 +4,11 @@
   "description": "Quize coronavirus project",
   "main": "index.js",
   "scripts": {
-    "watch": "node-sass sass/main.scss css/style.css --watch",
-    "compile": "node-sass sass/main.scss css/style.comp.css",
-    "concat": "concat -o css/concat.css css/conseils.css css/style.comp.css",
+    "watch": "node-sass -w sass -o css",
+    "compile": "node-sass sass -o css",
+    "concat": "concat -o css/concat.css css/topBarMenu.css css/main.css css/sectionSymp.css css/sectionRec.css css/footer.css",
     "prefix": "postcss css/concat.css --use=autoprefixer --map=false --output=css/style.prefix.css",
-    "compress": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "compress": "node-sass css/style.prefix.css css/main.css --output-style compressed",
     "comp-js": "uglifyjs js/script.js -o js/main.js",
     "build-css": "npm-run-all watch compile prefix compress"
   },

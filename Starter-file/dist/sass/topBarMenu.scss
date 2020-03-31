@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: 'cairo';
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.topbar {
+    width: 100%;
+}
+
+.bar1 {
+    width: 100%;
+    background-image: url("/Design/Assets/png/Merged-bar-51.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #D0E5F0;
+
+    &__logo {
+        max-width: 4%;
+        margin: 0.5% auto auto 2%;
+
+    }
+
+}
+
+
+ul {
+    width: 10%;
+    display: inline-flex;
+    list-style: none;
+    float: right;
+    margin-right: 16%;
+    margin-top: 2%;
+    margin-bottom: auto;
+
+    & li {
+        margin-right: 35%;
+
+        & a {
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+        }
+    }
+}
+
+.bar2 {
+    width: 100%;
+    background: #F4CF1B;
+
+    &__txtbar {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
