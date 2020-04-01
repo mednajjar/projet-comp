@@ -1,13 +1,15 @@
 .headerHero {
     width: 100%;
+    margin-bottom: 5%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: baseline;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .mainImg {
     width: 45%;
-    justify-content: flex-end;
     padding-left: 5%;
 
     &__groupe {
@@ -19,8 +21,6 @@
 .txtContent {
     width: 45%;
     text-align: center;
-    align-self: center;
-    justify-content: flex-start;
     padding-right: 5%;
 
     &__tit1 {
