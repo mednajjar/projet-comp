@@ -33,27 +33,48 @@ body {
 
 ul {
     width: 10%;
-    display: inline-flex;
+    height: auto;
     list-style: none;
     float: right;
-    margin-right: 16%;
-    margin-top: 2%;
-    margin-bottom: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: baseline;
+    font-size: 1.3vw;
+    margin-right: 20%;
+    margin-top: 1.5%;
+
+
+
+
 
     & li {
         margin-right: 35%;
+        align-items: center;
+
 
         & a {
             text-decoration: none;
             color: black;
             font-weight: 600;
+
+            & .imgMenu {
+                width: 7vw;
+                height: auto;
+                padding-left: 20%;
+            }
+
         }
+
     }
 }
+
 
 .bar2 {
     width: 100%;
     background: #F4CF1B;
+    font-size: 1.2vw;
 
     &__txtbar {
         margin: 0 auto;
