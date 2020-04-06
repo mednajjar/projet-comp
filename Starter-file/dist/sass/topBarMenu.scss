@@ -12,11 +12,16 @@ body {
 
 .topbar {
     width: 100%;
+
 }
 
 .bar1 {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 10;
     width: 100%;
-    background-image: url("/Design/Assets/png/Merged-bar-51.png");
+    background-image: url("/img/Merged-bar-51.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -67,17 +72,27 @@ ul {
 
         }
 
+        & a:active {
+            color: #1A519E;
+        }
+
     }
 }
 
 
 .bar2 {
     width: 100%;
+    margin-top: 5.9%;
     background: #F4CF1B;
     font-size: 1.2vw;
 
     &__txtbar {
         margin: 0 auto;
         text-align: center;
+        color: #1078AD;
+
+        & h4 {
+            color: black;
+        }
     }
 }

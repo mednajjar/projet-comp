@@ -1,0 +1,137 @@
+.allbox {
+    position: relative;
+    width: 40%;
+    height: 10vh;
+    margin: 0 auto;
+}
+
+.boxes {
+    position: relative;
+    width: 90%;
+    height: 10vh;
+    margin: 18% auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+    &__liner {
+        width: 100%;
+        height: 3px;
+        background-color: black;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+    }
+
+    &__cer1 {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #88B7D3;
+        z-index: 1;
+        left: 0;
+
+
+
+        &--cercle {
+
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #1078AD;
+
+
+        }
+    }
+
+    &__cer2 {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #F4CF1B;
+        z-index: 1;
+        left: 51%;
+    }
+
+    &__cer3 {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #1078AD;
+    }
+}
+
+.infotext {
+    position: absolute;
+    z-index: 3;
+    top: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+    &__Title1 {
+        margin-left: 1%;
+    }
+
+    &__Title2 {
+        margin-left: -2%;
+    }
+
+}
+
+
+.textbox {
+    width: 60%;
+    margin: 2% auto;
+    text-align: justify;
+    background-color: #96C5DC;
+    padding: 2%;
+
+    &__tit {
+        text-align: center;
+        margin-bottom: 1%;
+        color: #1078AD;
+    }
+
+    &__line {
+        width: 30%;
+        height: 3px;
+        background-color: #F4CF1B;
+        margin: 2% auto;
+    }
+}
+
+.blocbttn {
+    width: 30%;
+    margin: 0 auto 2%;
+
+    &__bttn2 {
+        width: 100%;
+        height: auto;
+        margin: 0 auto 2%;
+        background: #1078AD;
+        padding: 3%;
+        color: white;
+        font-size: 1.3vw;
+        font-weight: 700;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+
+    }
+}

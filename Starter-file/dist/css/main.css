@@ -1,4 +1,6 @@
 .headerHero {
+  width: 100%;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -28,7 +30,7 @@
   .txtContent__tit2 {
     color: #7F7F7F; }
 
-.btn1 {
+.bttn1 {
   width: 70%;
   height: auto;
   margin-top: 2%;
@@ -40,3 +42,6 @@
   border: none;
   border-radius: 4px;
   cursor: pointer; }
+  .bttn1 a {
+    text-decoration: none;
+    color: white; }
