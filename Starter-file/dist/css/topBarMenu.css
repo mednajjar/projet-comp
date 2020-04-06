@@ -11,6 +11,10 @@ body {
   width: 100%; }
 
 .bar1 {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 10;
   width: 100%;
   background-image: url("/Design/Assets/png/Merged-bar-51.png");
   background-position: center;
@@ -45,11 +49,17 @@ ul {
         width: 7vw;
         height: auto;
         padding-left: 20%; }
+    ul li a:active {
+      color: #1A519E; }
 
 .bar2 {
   width: 100%;
+  margin-top: 5.9%;
   background: #F4CF1B;
   font-size: 1.2vw; }
   .bar2__txtbar {
     margin: 0 auto;
-    text-align: center; }
+    text-align: center;
+    color: #1078AD; }
+    .bar2__txtbar h4 {
+      color: black; }
