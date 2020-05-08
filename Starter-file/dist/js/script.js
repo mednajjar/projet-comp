@@ -4,6 +4,7 @@ let demarer = document.getElementById('btn_test');
 let cer1 = document.getElementById('cer1');
 let cer2 = document.getElementById('cer2');
 let cer3 = document.getElementById('cer3');
+
 demarer.addEventListener('click', show)
 
 function show() {
@@ -11,7 +12,7 @@ function show() {
     textbox.style.display = 'none';
     demarer.style.display = 'none';
     cer1.style.background = 'none';
-    cer2.style.background = '#1078AD'
+    cer2.style.background = '#1078AD';
 }
 
 function buildQuiz() {
@@ -101,6 +102,7 @@ buildQuiz();
 const previousButton = document.getElementById("previous");
 const nextButton = document.getElementById("next");
 const slides = document.querySelectorAll(".slide");
+let totQuestion = myQuestions.length;
 let currentSlide = 0;
 
 function showSlide(n) {
@@ -122,27 +124,10 @@ function showSlide(n) {
 }
 showSlide(0);
 
-var bar = document.getElementById('bar');
-var txt = document.getElementById('text');
-let submit = document.getElementById('submit');
-var count = 4.6;
-var myvar = 1;
-// Listen for an event on the button
-// Increase the width of the bar by 10 percent(10%)
-function step() {
-    bar.style.width = count + '%';
-    txt.innerHTML = myvar + '/22'
-    if (count === 100) {
-        count = 0;
-        myvar = 1;
-    } else {
-        count += 4.6;
-        myvar += 1;
-    }
 
 
-}
-step();
+
+
 
 function showNextSlide() {
     let inputRadio = document.querySelector('input[type=radio]:checked');
@@ -151,10 +136,11 @@ function showNextSlide() {
         return;
 
     }
-    step();
+
 
     inputRadio.checked = false;
     showSlide(currentSlide + 1);
+
 
 
 }
@@ -173,7 +159,16 @@ function showPreviousSlide() {
 
 }
 
+function showResults() {
+    let testo = document.getElementById('testo');
+    if (currentSlide == totQuestion - 1) {
+        testo.style.display = 'none';
+        cer2.style.background = 'none';
+        cer3.style.background = '#96C5DC'
+    }
+}
+
 // on submit, show results
-// submitButton.addEventListener('click', showResults);
+submitButton.addEventListener('click', showResults);
 previousButton.addEventListener("click", showPreviousSlide);
 nextButton.addEventListener("click", showNextSlide);
