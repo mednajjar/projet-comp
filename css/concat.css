@@ -16,7 +16,7 @@ body {
   top: 0;
   z-index: 10;
   width: 100%;
-  background-image: url("/Starter-file/dist/img/Merged-bar-51.png");
+  background-image: url("/img/Merged-bar-51.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -368,7 +368,7 @@ ul {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: center; }
+  justify-content: space-around; }
   .boxes__liner {
     width: 100%;
     height: 3px;
@@ -388,25 +388,48 @@ ul {
     border-radius: 50%;
     background: #88B7D3;
     z-index: 1;
-    left: 0; }
+    left: -4%; }
     .boxes__cer1--cercle {
       width: 10px;
       height: 10px;
       border-radius: 50%;
       background-color: #1078AD; }
-  .boxes__cer2 {
+  .boxes__C2 {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background-color: #F4CF1B;
+    background: none;
     z-index: 1;
-    left: 51%; }
-  .boxes__cer3 {
-    width: 10px;
-    height: 10px;
+    left: 47%; }
+    .boxes__C2--cercle {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #F4CF1B; }
+  .boxes__C3 {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background-color: #1078AD; }
+    background: none;
+    z-index: 1;
+    left: 96%; }
+    .boxes__C3--cercle {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #1078AD; }
 
 .infotext {
   position: absolute;
@@ -421,7 +444,7 @@ ul {
   height: auto;
   margin: 0 auto; }
   .infotext__Title1 {
-    margin-left: 1%; }
+    margin-left: -1%; }
   .infotext__Title2 {
     margin-left: -2%; }
 
@@ -441,6 +464,70 @@ ul {
     background-color: #F4CF1B;
     margin: 2% auto; }
 
+.start {
+  display: none;
+  width: 60%;
+  height: 50vh;
+  margin: 2% auto;
+  border-radius: 8px;
+  text-align: justify;
+  background-color: #96C5DC;
+  padding: 2%; }
+
+.contentTest {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+  .contentTest__answer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around; }
+
+.question {
+  width: 90%;
+  padding: 0% 2%;
+  height: 20vh;
+  margin-bottom: 2%; }
+
+label {
+  width: 23%;
+  height: 13vh;
+  border: 5px solid #1078AD;
+  position: relative;
+  margin: auto;
+  border-radius: 4px;
+  text-align: center; }
+
+input[type="radio"] {
+  -webkit-appearance: none; }
+
+input[type='radio']:checked + label {
+  background-color: #1078AD;
+  color: white;
+  box-shadow: 0 15px 45px rgba(24, 249, 141, 0.2); }
+
+.blocBtn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around; }
+  .blocBtn__Btn {
+    width: 30%;
+    margin-top: 1%;
+    border: none;
+    background: #1078AD;
+    border-radius: 4px;
+    color: white;
+    padding: 1% 0%;
+    font-size: 1.2rem;
+    font-weight: 500; }
+
 .blocbttn {
   width: 30%;
   margin: 0 auto 2%; }
@@ -456,3 +543,154 @@ ul {
     border: none;
     border-radius: 4px;
     cursor: pointer; }
+
+.quiz-container {
+  position: relative;
+  width: 70%;
+  height: 40vh;
+  margin: 0% auto 3%;
+  padding: 5%;
+  border: 1px solid rgba(202, 199, 199, 0.562);
+  border-radius: 6px;
+  justify-content: center; }
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6vh;
+  border-bottom: 1px solid rgba(202, 199, 199, 0.562);
+  background: #F7F7F7;
+  z-index: 12;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly; }
+
+.blocBtn {
+  position: absolute;
+  width: 85%;
+  top: 85%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10; }
+
+.question {
+  margin: 6% auto 4%;
+  height: 16vh;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #787878;
+  font-weight: 600;
+  padding: 0% 2%; }
+
+.answers {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2% auto; }
+
+input[type="radio"] {
+  -webkit-appearance: none; }
+
+label {
+  width: 20%;
+  height: 10vh;
+  border: 3px solid #1078AD;
+  position: relative;
+  margin: auto;
+  border-radius: 4px;
+  text-align: center; }
+
+label > span {
+  position: absolute;
+  top: 50%;
+  width: 102%;
+  height: 80%;
+  padding-top: 10%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 1.2rem; }
+
+input[type='radio']:checked + span {
+  background-color: #1078AD;
+  color: #F4CF1B;
+  box-shadow: 0 15px 45px rgba(24, 249, 141, 0.2); }
+
+.slide {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s; }
+
+.active-slide {
+  opacity: 1;
+  z-index: 2; }
+
+.btn {
+  width: 20%;
+  height: 5vh;
+  background: #dcf0fa;
+  border: 1.5px solid #1078AD;
+  border-radius: 4px;
+  color: #1078AD;
+  font-size: 1.1rem;
+  font-weight: 500; }
+
+.btn:hover {
+  background: #1078AD;
+  color: #F4CF1B; }
+
+.quiz-container {
+  display: none; }
+
+.affiche__resultat {
+  width: 100%;
+  height: 100%;
+  color: #787878;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .affiche__resultat h3 {
+    margin: 3% auto 3%; }
+  .affiche__resultat p {
+    margin: 3% auto 3%; }
+  .affiche__resultat hr {
+    margin: 3% auto 3%; }
+
+progress {
+  width: 95%;
+  -webkit-appearance: none;
+  border: 1px solid rgba(202, 199, 199, 0.562);
+  color: #1078AD;
+  border-radius: 15px; }
+  progress::-webkit-progress-bar {
+    background: #f1f1f1; }
+  progress::-webkit-progress-value {
+    background: #1078AD; }
+  progress::-moz-progress-value {
+    background: #1078AD; }
+
+.Num {
+  width: 10%;
+  height: auto;
+  text-align: center;
+  font-weight: 600; }
+
+.bar-container {
+  width: 90%;
+  height: auto; }
