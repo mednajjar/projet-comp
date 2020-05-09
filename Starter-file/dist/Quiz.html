@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/quiz.css">
     <title>Project Javascript</title>
 </head>
 
@@ -39,13 +40,17 @@
                 <!---------------------------------------------------------->
                 <div class="boxes__liner"></div>
                 <!---------------------------------------------------------->
-                <div class="boxes__cer1">
+                <div class="boxes__cer1" id="cer1">
                     <div class="boxes__cer1--cercle"></div>
                 </div>
                 <!---------------------------------------------------------->
-                <div class="boxes__cer2"></div>
+                <div class="boxes__C2" id="cer2">
+                    <div class="boxes__C2--cercle"></div>
+                </div>
                 <!---------------------------------------------------------->
-                <div class="boxes__cer3"></div>
+                <div class="boxes__C3" id="cer3">
+                    <div class="boxes__C3--cercle"></div>
+                </div>
                 <!---------------------------------------------------------->
             </div>
             <div class="infotext">
@@ -56,7 +61,7 @@
 
         </div>
 
-        <div class="textbox">
+        <div class="textbox" id="textbox">
             <h1 class="textbox__tit">Note</h1>
             <h3>Cette application est gratuite, nous l'avons conçue pour que les personnes atteintes du virus Corona 19
                 connaissent leur santé et leur comportement. Nous ne garantirons pas l'exactitude des
@@ -70,8 +75,38 @@
             </h3>
         </div>
         <div class="blocbttn">
-            <button class="blocbttn__bttn2">Démmarer le Test</button>
+            <button class="blocbttn__bttn2" id="btn_test">Démmarer le Test</button>
         </div>
+
+        <div class="quiz-container" id="contentTest">
+            <div class="progress">
+                <div class="Num">
+                    <p id="qNumber">1/22</p>
+                </div>
+                <div class="bar-container">
+                    <progress value="1" max="22" id=p1></progress>
+                </div>
+            </div>
+            <div id="testo">
+                <div id="quiz"></div>
+
+                <div class="blocBtn">
+                    <button class="btn" id="previous">Précédent</button>
+                    <button class="btn" id="next">Suivant</button>
+                    <button class="btn" id="submit">Terminer</button>
+                </div>
+            </div>
+            <div class="affiche__resultat" id="resultatFinal">
+                <h3>Résultat</h3>
+                <p id="affichageResult"> </p>
+                <hr>
+                <p> Restez chez vous au maximum en attendant que les symptômes disparaissent. Prenez votre
+                    température deux
+                    fois par jour. Rappel des mesures d’hygiène. </p>
+            </div>
+        </div>
+
+        <div id="results"></div>
     </div>
 
     <!-----------------------------------------------**section symptome**------------------------------------------------------------->
@@ -133,6 +168,9 @@
 
 
     <script src="./js/main.js"></script>
+    <script src="./js/Questions.js"></script>
+    <script src="./js/script.js"></script>
+
 </body>
 
 </html>
