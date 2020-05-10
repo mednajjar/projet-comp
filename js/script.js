@@ -142,129 +142,53 @@ showSlide(0);
 
 
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-var resultat = [];
-tabSymptome = [];
-tabfacteurPronostique = [];
-tabfacteurMineur = [];
-tabfacteurMajeur = [];
+let affichage = document.getElementById('affichageResult');
+resultat = [];
+result1 = [];
+result2 = [];
+FdeG_mineur1 = [];
+FdeG_mineur2 = [];
+FdeG_mineur3 = [];
 
-resultSyptome = 0;
-resultFacteurPronostique = 0;
-resultfacteurMineur = 0;
-resultfacteurMajeur = 0;
+FdeG_majeur1 = [];
+FdeG_majeur2 = [];
+FdeG_majeur3 = [];
 
-trireponces = () => {
-    for (let i = 0; i < resultat.length; i++) {
-        if (i == 1) {
-            tabfacteurMineur.push(resultat[i]);
-            tabfacteurMajeur.push(resultat[i]);
-        } else if (i >= 11 && i <= 21) {
-            tabfacteurPronostique.push(resultat[i]);
-        } else if (i == 7 || i == 8) {
-            tabfacteurMajeur.push(resultat[i]);
-        } else if (i == 6 || i == 9) {
-            tabfacteurMineur.push(resultat[i]);
+function aficheResult() {
+    //:::::::::::::::::::::::::::::::::::** Resultat facteur pronostique **::::::::::::::::::::::::::::::::::::::::::::
+    if (result1 == "b") {
+        affichageResult.innerHTML = traitement[0]
+        return;
+    } else
+    if (result2 == "c" && (FdeG_mineur1.length == 2 || FdeG_mineur2 == "v" || FdeG_mineur3.length == 1)) {
+        affichageResult.innerHTML = traitement[1]
+    } else
+        //:::::::::::::::::::::::::::::::::::** Resultat facteur pronostique ou plu **:::::::::::::::::::::::::::::::::::::
+        if (FdeG_mineur1 == "" ||
+            FdeG_mineur2 == "" ||
+            FdeG_mineur3 == "" ||
+            FdeG_majeur1 == "" ||
+            FdeG_majeur2 == "" ||
+            FdeG_majeur3 == "") {
+            affichageResult.innerHTML = traitement[1]
         }
-        if (i >= 0 && i <= 9) {
-            tabSymptome.push(resultat[i]);
-        }
+    if (FdeG_mineur1.length == 2 || FdeG_mineur2 == "v" || FdeG_mineur3.length == 1) {
+        affichageResult.innerHTML = traitement[1]
     }
-};
+    if ((FdeG_mineur1.length == 2 && FdeG_mineur2 == "v") ||
+        (FdeG_mineur1.length == 2 && FdeG_mineur3.length == 1) ||
+        (FdeG_mineur2 == "v" && FdeG_mineur3.length == 1)) {
+        affichageResult.innerHTML = traitement[2]
+    }
 
-nombreDeFacteur = () => {
-    for (let i = 0; i < tabSymptome.length; i++) {
-        if (tabSymptome[i] == "Oui") {
-            resultSyptome++;
-        }
-    }
-    for (let i = 0; i < tabfacteurPronostique.length; i++) {
-        if (tabfacteurPronostique[i] >= 70 || tabfacteurPronostique[i] == "Oui") {
-            resultFacteurPronostique++;
-        }
-    }
-    for (let i = 0; i < tabfacteurMineur.length; i++) {
-        if (
-            tabfacteurMineur[i] >= 39 ||
-            tabfacteurMineur[i] == "Oui" ||
-            tabfacteurMineur[i] == "Très fatigué" ||
-            tabfacteurMineur[i] == " fatigué"
-        ) {
-            resultfacteurMineur++;
-        }
-    }
-    for (let i = 0; i < tabfacteurMajeur.length; i++) {
-        if (tabfacteurMajeur[i] <= 35.4 || tabfacteurMajeur[i] == "Oui") {
-            resultfacteurMajeur++;
-        }
-    }
-};
-let messageFinal = document.getElementById("affichageResult");
-Algorithme = () => {
-    if (
-        resultat[0] == "Oui" ||
-        (resultat[2] == "Oui" && resultat[4] == "Oui") ||
-        (resultat[2] == "Oui" && resultat[3] == "Oui") ||
-        (resultat[0] == "Oui" && resultat[5] == "Oui")
-        //Patient avec fièvre, ou toux + mal de gorge, ou toux + courbatures ou fièvre + diarrhée :
-    ) {
-        if (resultFacteurPronostique == 0) {
-            if (
-                resultfacteurMajeur == 0 &&
-                resultfacteurMineur == 0 &&
-                resultat[10] < 50
-            ) {
-                messageFinal.innerText = messageAffiche[0];
-            } else if (
-                resultfacteurMajeur == 0 &&
-                resultfacteurMineur >= 1 &&
-                (resultat[10] >= 50 || resultat[10] <= 69)
-            ) {
-                messageFinal.innerText = messageAffiche[1];
-            }
-        } else {
-            if (resultfacteurMajeur == 0 && resultfacteurMineur <= 1) {
-                messageFinal.innerText = messageAffiche[1];
-            } else if (resultfacteurMajeur == 0 && resultfacteurMineur >= 2) {
-                messageFinal.innerText = messageAffiche[2];
-            }
-        }
-        if (resultfacteurMajeur >= 1) {
-            messageFinal.innerText = messageAffiche[2];
-        }
-    } else if (resultat[0] == "Oui" && resultat[2] == "Oui") {
-        if (resultFacteurPronostique == 0) {
-            if (resultfacteurMajeur == 0 && resultfacteurMineur >= 1) {
-                messageFinal.innerText = messageAffiche[3];
-            }
-        } else {
-            if (resultfacteurMajeur == 0 && resultfacteurMineur <= 1) {
-                messageFinal.innerText = messageAffiche[3];
-            } else if (resultfacteurMajeur == 0 && resultfacteurMineur > 1) {
-                messageFinal.innerText = messageAffiche[2];
-            }
-        }
-        if (resultfacteurMajeur > 0) {
-            messageFinal.innerText = messageAffiche[2];
-        }
-    } else if (
-        resultat[0] == "Oui" ||
-        resultat[2] == "Oui" ||
-        resultat[3] == "Oui" ||
-        resultat[4] == "Oui"
-    ) {
-        if (resultfacteurMajeur == 0 && resultfacteurMineur == 0) {
-            messageFinal.innerText = messageAffiche[4];
-        } else {
-            if (resultFacteurPronostique > 0) {
-                messageFinal.innerText = messageAffiche[4] + " " + messageAffiche[2];
-            }
-        }
-    } else if (resultSyptome == 0) {
-        messageFinal.innerText = messageAffiche[5];
-    } else if (resultat[10] < 15) {
-        messageFinal.innerText = messageAffiche[6];
-    }
-};
+    //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+}
+
+
+
+
+
+
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
@@ -276,13 +200,59 @@ function showNextSlide() {
         return;
 
     }
+    //:::::::::::::::::::::::::::::::** A G E - C O N D I T I O N **::::::::::::::::::::::::::::
     let mineur = inputRadio.value;
     if (myQuestions[currentSlide].correctAnswer == mineur) {
         alert('Prenez contact avec votre médecin généraliste au moindre doute. Cette application n’est pour l’instant pas adaptée aux personnes de moins de 15 ans. En cas d’urgence, appeler le 15. ');
-        modal.style.display = "block";
         inputRadio.checked = false;
         return false;
     }
+    //:::::::::::::::::::::::::::::::::::::** result 1 **::::::::::::::::::::::::::::::::
+
+    if (myQuestions[currentSlide].correctAnswer1 == mineur) {
+        result1.push(mineur)
+    }
+    //:::::::::::::::::::::::::::::::::::::** result 2 **::::::::::::::::::::::::::::::::
+    if (myQuestions[currentSlide].correctAnswer2 == mineur) {
+        result2.push(mineur)
+        console.log(result2)
+    }
+    //:::::::::::::::::::::::::::::::::::::** Facteur de gravité Mineur 1 **::::::::::::::::::::::::::::::::
+    if (myQuestions[currentSlide].correctAnswer4 == mineur ||
+        myQuestions[currentSlide].correctAnswer9 == mineur) {
+        FdeG_mineur1.push(mineur);
+        console.log(FdeG_mineur1);
+    }
+    //:::::::::::::::::::::::::::::::::::::** Facteur de gravité Mineur 2 **::::::::::::::::::::::::::::::::
+    if (myQuestions[currentSlide].correctAnswer20 == mineur) {
+        FdeG_mineur2.push(mineur);
+        console.log(FdeG_mineur2);
+    }
+    //:::::::::::::::::::::::::::::::::::::** Facteur de gravité Mineur 3 **::::::::::::::::::::::::::::::::
+    if (myQuestions[currentSlide].correctAnswer28 == mineur ||
+        myQuestions[currentSlide].correctAnswer29 == mineur) {
+        FdeG_mineur3.push(mineur);
+        console.log(FdeG_mineur3);
+    }
+    //:::::::::::::::::::::::::::::::::::::** Facteur de gravité Majour 1 **::::::::::::::::::::::::::::::::
+    if (myQuestions[currentSlide].correctAnswer24 == mineur) {
+        FdeG_majeur1.push(mineur);
+        console.log(FdeG_majeur1);
+    }
+    //:::::::::::::::::::::::::::::::::::::** Facteur de gravité Majour 2 **::::::::::::::::::::::::::::::::
+    if (myQuestions[currentSlide].correctAnswer22 == mineur) {
+        FdeG_majeur2.push(mineur);
+        console.log(FdeG_majeur2);
+    }
+    //:::::::::::::::::::::::::::::::::::::** Facteur de gravité Majour 3 **::::::::::::::::::::::::::::::::
+    if (myQuestions[currentSlide].correctAnswer4 == mineur ||
+        myQuestions[currentSlide].correctAnswer9 == mineur) {
+        FdeG_majeur3.push(mineur);
+        console.log(FdeG_majeur3);
+    }
+    //:::::::::::::::::::::::::::::::::::::::::**Facteur de Gravité**:::::::::::::::::::::::::::::::::::::::::::::
+
+    //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
     inputRadio.checked = false;
     showSlide(currentSlide + 1);
@@ -291,6 +261,10 @@ function showNextSlide() {
     document.getElementById("p1").value = v1 + 1;
 
     increment();
+    aficheResult();
+
+
+
 
 
 
@@ -304,6 +278,7 @@ function showPreviousSlide() {
     if (currentSlide >= 0) {
         var v1 = document.getElementById('p1').value;
         document.getElementById("p1").value = v1 - 1;
+        inputRadio.checked = false;
     }
 
     decrement();
@@ -318,9 +293,6 @@ function showResults() {
         cer2.style.background = 'none';
         cer3.style.background = '#96C5DC';
         final.style.display = 'block';
-        trireponces();
-        nombreDeFacteur();
-        Algorithme();
     }
 }
 
