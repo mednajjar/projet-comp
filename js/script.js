@@ -15,7 +15,6 @@ function show() {
     cer1.style.background = 'none';
     cer2.style.background = '#1078AD';
     final.style.display = 'none'
-    step(conter, valeur);
 }
 
 function buildQuiz() {
@@ -139,6 +138,7 @@ function showSlide(n) {
     }
 }
 showSlide(0);
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -276,7 +276,13 @@ function showNextSlide() {
         return;
 
     }
-
+    let mineur = inputRadio.value;
+    if (myQuestions[currentSlide].correctAnswer == mineur) {
+        alert('Prenez contact avec votre médecin généraliste au moindre doute. Cette application n’est pour l’instant pas adaptée aux personnes de moins de 15 ans. En cas d’urgence, appeler le 15. ');
+        modal.style.display = "block";
+        inputRadio.checked = false;
+        return false;
+    }
 
     inputRadio.checked = false;
     showSlide(currentSlide + 1);
@@ -285,6 +291,7 @@ function showNextSlide() {
     document.getElementById("p1").value = v1 + 1;
 
     increment();
+
 
 
 

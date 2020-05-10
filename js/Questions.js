@@ -6,7 +6,7 @@ const myQuestions = [{
             c: "50-69 ans",
             d: ">= 70 ans"
         },
-        correctAnswer: "c"
+        correctAnswer: "a"
     },
     {
         question: "Pensez-vous avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
