@@ -6,203 +6,235 @@ const myQuestions = [{
             c: "50-69 ans",
             d: ">= 70 ans"
         },
-        correctAnswer: "a"
+        correctAnswer: "a",
+        correctAnswer1: "b",
+        correctAnswer2: "c",
+        correctAnswer3: "d"
+
     },
     {
         question: "Pensez-vous avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
         answers: {
-            a: "OUI",
-            b: "NON",
-            c: "Ne Sait Pas!"
+            e: "OUI",
+            f: "NON",
+            j: "Ne Sait Pas!"
         },
-        correctAnswer: "c"
+        correctAnswer4: "e",
+        correctAnswer5: "f",
+        correctAnswer6: "j"
     },
     {
         question: "Quelle est votre température ?",
         answers: {
-            a: "35,5 - 37,7°",
-            b: "37,8 – 38,9°C",
-            c: ">= 39°C ou <= 35,4°"
+            i: "35,5 - 37,7°",
+            g: "37,8 – 38,9°C",
+            k: ">= 39°C ou <= 35,4°"
 
         },
-        correctAnswer: "d"
+        correctAnswer7: "i",
+        correctAnswer8: "g",
+        correctAnswer9: "k"
     },
     {
         question: "Avez-vous une toux ou une augmentation de votre toux habituelle ces derniers jours ?",
         answers: {
-            a: "OUI",
-            b: "NON"
+            l: "OUI",
+            m: "NON"
 
         },
-        correctAnswer: "c"
+        correctAnswer10: "l",
+        correctAnswer11: "m"
     },
     {
         question: "Avez-vous des douleurs musculaires ou des courbatures inhabituelles ces derniers jours ?",
         answers: {
-            a: "OUI",
-            b: "NON"
+            n: "OUI",
+            o: "NON"
 
         },
-        correctAnswer: "c"
+        correctAnswer12: "n",
+        correctAnswer13: "o"
     },
     {
         question: "Avez-vous un mal de gorge apparu ces derniers jours ?",
         answers: {
-            a: "OUI",
-            b: "NON"
+            p: "OUI",
+            q: "NON"
 
         },
-        correctAnswer: "c"
+        correctAnswer14: "p",
+        correctAnswer15: "q"
     },
     {
         question: "Avez-vous de la diarrhée ces dernières 24 heures (au moins 3 selles molles) ?",
         answers: {
-            a: "OUI",
-            b: "NON"
+            r: "OUI",
+            s: "NON"
 
         },
-        correctAnswer: "c"
+        correctAnswer16: "r",
+        correctAnswer17: "s"
     },
     {
         question: "Avez-vous une fatigue inhabituelle ces derniers jours ?",
         answers: {
-            a: "OUI",
-            b: "NON"
+            t: "OUI",
+            u: "NON"
 
         },
-        correctAnswer: "c"
+        correctAnswer18: "t",
+        correctAnswer19: "u"
     },
     {
         question: "cette fatigue vous oblige-t-elle à vous reposer plus de la moitié de la journée ?",
         answers: {
-            a: "OUI",
-            b: "NON"
+            v: "OUI",
+            w: "NON"
         },
-        correctAnswer: "c"
+        correctAnswer20: "v",
+        correctAnswer21: "w"
     },
     {
         question: "Avez-vous des difficultés importantes pour vous alimenter ou boire depuis plus de 24h ?",
         answers: {
-            a: "OUI",
-            b: "NON"
+            x: "OUI",
+            y: "NON"
         },
-        correctAnswer: "c"
+        correctAnswer22: "x",
+        correctAnswer23: "y"
     },
     {
         question: "Avez-vous vu apparaître une gêne respiratoire ou une augmentation de votre gêne respiratoire habituelle ?",
         answers: {
-            a: "OUI",
-            b: "NON"
+            z: "OUI",
+            aa: "NON"
 
         },
-        correctAnswer: "c"
+        correctAnswer24: "z",
+        correctAnswer25: "aa"
     },
     {
         question: "Comment vous sentez-vous ?",
         answers: {
-            a: "Bien",
-            b: "Assez bien",
-            c: "Mal",
-            d: "Très mal"
+            bb: "Bien",
+            cc: "Assez bien",
+            dd: "Mal",
+            ee: "Très mal"
         },
-        correctAnswer: "c"
+        correctAnswer26: "bb",
+        correctAnswer27: "cc",
+        correctAnswer28: "dd",
+        correctAnswer29: "ee"
     },
     {
         question: "Avez-vous d’autre symptôme ?",
         answers: {
-            a: "OUI",
-            b: "NON"
+            ff: "OUI",
+            jj: "NON"
 
         },
-        correctAnswer: "c"
+        correctAnswer30: "ff",
+        correctAnswer31: "jj"
     },
     {
         question: "Avez-vous de l’hypertension artérielle ? Ou avez-vous une maladie cardiaque ou vasculaire ? Ou prenez-vous un traitement à visée cardiologique ?",
         answers: {
-            a: "OUI",
-            b: "NON",
-            c: "Ne Sait Pas"
+            kk: "OUI",
+            ll: "NON",
+            mm: "Ne Sait Pas"
         },
-        correctAnswer: "c"
+        correctAnswer32: "kk",
+        correctAnswer33: "ll",
+        correctAnswer34: "mm"
     },
     {
         question: "Êtes-vous diabétique ?",
         answers: {
-            a: "OUI",
-            b: "NON"
+            nn: "OUI",
+            oo: "NON"
 
         },
-        correctAnswer: "c"
+        correctAnswer35: "nn",
+        correctAnswer36: "oo"
     },
     {
         question: "Avez-vous ou avez-vous eu un cancer ?",
         answers: {
-            a: "OUI",
-            b: "NON"
+            pp: "OUI",
+            qq: "NON"
 
         },
-        correctAnswer: "c"
+        correctAnswer37: "pp",
+        correctAnswer38: "qq"
     },
     {
         question: "Avez-vous une maladie respiratoire ? Ou êtes-vous suivi par un pneumologue ?",
         answers: {
-            a: "OUI",
-            b: "NON"
+            rr: "OUI",
+            ss: "NON"
 
         },
-        correctAnswer: "c"
+        correctAnswer39: "rr",
+        correctAnswer40: "ss"
     },
     {
         question: "Avez-vous une insuffisance rénale chronique dialysée ?",
         answers: {
-            a: "OUI",
-            b: "NON"
+            tt: "OUI",
+            uu: "NON"
 
         },
-        correctAnswer: "c"
+        correctAnswer41: "tt",
+        correctAnswer42: "uu"
     },
     {
         question: "Avez-vous une maladie chronique du foie ?",
         answers: {
-            a: "OUI",
-            b: "NON"
+            vv: "OUI",
+            ww: "NON"
 
         },
-        correctAnswer: "c"
+        correctAnswer43: "vv",
+        correctAnswer44: "ww"
     },
     {
         question: "Êtes-vous enceinte ?",
         answers: {
-            a: "OUI",
-            b: "NON",
-            c: "Homme"
+            xx: "OUI",
+            yy: "NON",
+            zz: "Homme"
         },
-        correctAnswer: "c"
+        correctAnswer45: "zz",
+        correctAnswer46: "yy",
+        correctAnswer47: "zz"
     },
     {
         question: "Avez-vous une maladie connue pour diminuer vos défenses immunitaires ?",
         answers: {
-            a: "OUI",
-            b: "NON",
-            c: "Ne Sait Pas"
+            aaa: "OUI",
+            bbb: "NON",
+            ccc: "Ne Sait Pas"
         },
-        correctAnswer: "c"
+        correctAnswer48: "aaa",
+        correctAnswer49: "bbb",
+        correctAnswer50: "ccc"
     },
     {
         question: "Prenez-vous un traitement immunosuppresseur ? C’est un traitement qui diminue vos défenses contre les infections. Voici quelques exemples : corticoïdes, méthotrexate, ciclosporine, tacrolimus, azathioprine, cyclophosphamide (liste non exhaustive)",
         answers: {
-            a: "OUI",
-            b: "NON",
-            c: "Ne Sait Pas"
+            ddd: "OUI",
+            eee: "NON",
+            fff: "Ne Sait Pas"
         },
-        correctAnswer: "c"
+        correctAnswer51: "ddd",
+        correctAnswer52: "eee",
+        correctAnswer53: "fff"
     }
 ];
 
-messageAffiche = [
+traitement = [
     ` nous vous conseillons de rester à votre domicile et de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez aussi utiliser à nouveau l’application pour réévaluer vos symptômes. `,
-    `téléconsultation ou médecin généraliste ou visite à domicile  préciser “appelez le 141 si une gêne respiratoire ou des difficultés importantes pour s’alimenter ou boire pendant plus de 24h apparaissent.” 
-   `,
+    `téléconsultation ou médecin généraliste ou visite à domicile.`,
     `appel 141 `,
     ` téléconsultation ou médecin généraliste ou visite à domicile  `,
     `Votre situation ne relève probablement pas du Covid-19. Consultez votre médecin au moindre doute`,
