@@ -41,7 +41,8 @@
   background-color: #96C5DC;
   text-align: center;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  margin-bottom: 2%; }
   .corona h3 {
     color: #1078AD;
     margin: 1%; }

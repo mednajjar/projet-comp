@@ -234,7 +234,7 @@ const myQuestions = [{
 
 traitement = [
     ` nous vous conseillons de rester à votre domicile et de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez aussi utiliser à nouveau l’application pour réévaluer vos symptômes. `,
-    `téléconsultation ou médecin généraliste ou visite à domicile.`,
+    `téléconsultation ou médecin généraliste ou visite à domicile. “Appelez le 141 si une gêne respiratoire ou des difficultés importantes pour s’alimenter ou boire pendant plus de 24h apparaissent.” `,
     `appel 141 `,
     ` téléconsultation ou médecin généraliste ou visite à domicile  `,
     `Votre situation ne relève probablement pas du Covid-19. Consultez votre médecin au moindre doute`,

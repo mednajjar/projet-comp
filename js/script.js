@@ -156,14 +156,20 @@ FdeG_majeur3 = [];
 
 function aficheResult() {
     //:::::::::::::::::::::::::::::::::::** Resultat facteur pronostique **::::::::::::::::::::::::::::::::::::::::::::
-    if (result1 == "b") {
+    if (result1 == "b" &&
+        FdeG_mineur1 == "" ||
+        FdeG_mineur2 == "" ||
+        FdeG_mineur3 == "" ||
+        FdeG_majeur1 == "" ||
+        FdeG_majeur2 == "" ||
+        FdeG_majeur3 == "") {
         affichageResult.innerHTML = traitement[0]
         return;
     } else
     if (result2 == "c" && (FdeG_mineur1.length == 2 || FdeG_mineur2 == "v" || FdeG_mineur3.length == 1)) {
         affichageResult.innerHTML = traitement[1]
     } else
-        //:::::::::::::::::::::::::::::::::::** Resultat facteur pronostique ou plu **:::::::::::::::::::::::::::::::::::::
+        //:::::::::::::::::::::::::::::::::::** Resultat facteur pronostique ou plus **:::::::::::::::::::::::::::::::::::::
         if (FdeG_mineur1 == "" ||
             FdeG_mineur2 == "" ||
             FdeG_mineur3 == "" ||
@@ -178,6 +184,10 @@ function aficheResult() {
     if ((FdeG_mineur1.length == 2 && FdeG_mineur2 == "v") ||
         (FdeG_mineur1.length == 2 && FdeG_mineur3.length == 1) ||
         (FdeG_mineur2 == "v" && FdeG_mineur3.length == 1)) {
+        affichageResult.innerHTML = traitement[2]
+    }
+    //:::::::::::::::::::::::::::::::::::**  au moins un facteur de gravité majeur  **:::::::::::::::::::::::::::::::::::::
+    if (FdeG_majeur1 == "z" || FdeG_majeur2 == "x" || FdeG_majeur3.length == 2) {
         affichageResult.innerHTML = traitement[2]
     }
 
