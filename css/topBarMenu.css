@@ -14,7 +14,7 @@ body {
   overflow: hidden;
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 100;
   width: 100%;
   background-image: url("/img/Merged-bar-51.png");
   background-position: center;
@@ -22,7 +22,7 @@ body {
   background-size: cover;
   background-color: #D0E5F0; }
   .bar1__logo {
-    max-width: 4%;
+    max-width: 4.9%;
     margin: 0.5% auto auto 2%; }
 
 ul {
